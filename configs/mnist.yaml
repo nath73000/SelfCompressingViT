@@ -1,0 +1,33 @@
+seed: 13
+device: mps
+
+data:
+  name: mnist
+  image_shape: [1, 28, 28]
+  num_classes: 10
+  mean: [0.1307]
+  std: [0.3081]
+  batch_size: 256
+  eval_batch_size: 512
+
+model:
+  patch_size: 4
+  embedding_dim: 64
+  num_heads: 4
+  num_layers: 2
+  hidden_dim: 128
+  init_num_bits: 8
+  init_exponent: -8
+
+optim:
+  lr_weight: 1.0e-3
+  lr_quantization: 0.05
+  eps_weight: 1.0e-5
+  eps_quantization: 1.0e-6
+
+training:
+  epochs: 60
+  gamma: 0.03
+  prune_after: 10
+  lr_decay_epochs: [45, 55]
+  lr_decay_factor: 0.4

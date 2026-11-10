@@ -1,0 +1,6 @@
+torch>=2.0
+torchvision
+pyyaml
+pandas
+matplotlib
+selfcompress @ git+https://github.com/nath73000/SelfCompressingNeuralNetwork
